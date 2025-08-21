@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "MyatPwint Publishing",
     description: "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "/projects/project1.png",
+    image: "projects/project1.png",
     tags: ["React", "Stripe", "Supabase", "Node.js"],
     demoUrl: "https://myatpwint-pre.netlify.app/",
     githubUrl: "https://github.com/byte-squad-abac/myatpwint",
@@ -15,7 +15,7 @@ const projects = [
     title: "Web Dev UI",
     description:
       "Interactive dashboard with Multiple projects directories and Cool featuring Elden Ring mode.",
-    image: "/projects/project2.png",
+    image: "projects/project2.png",
     tags: ["JavaScript", "React", "Html/Css"],
     demoUrl: "https://lucas1792003.github.io/waiyanpaing.github.io/",
     githubUrl: "https://github.com/Lucas1792003/waiyanpaing.github.io",
@@ -25,7 +25,7 @@ const projects = [
     title: "E-commerce Platform",
     description:
       "Trying first time building E-commerce site with PHP for database project. Selling cute pets.",
-    image: "/projects/project3.png",
+    image: "projects/project3.png",
     tags: ["Html", "JavaScript", "PHP"],
     demoUrl: "https://lucas1792003.github.io/Pawsitive/",
     githubUrl: "https://github.com/Lucas1792003/Pawsitive",
