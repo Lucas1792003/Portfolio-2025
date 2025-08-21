@@ -3,44 +3,26 @@ import { Download, Loader2, CheckCircle2 } from "lucide-react";
 
 export default function ResumeDownloadButton() {
   const [status, setStatus] = useState("idle");
+  // works in dev & prod because your vite.config base is '/Portfolio-2025/'
+  const pdfHref = `${import.meta.env.BASE_URL}resume.pdf`; // e.g. /Portfolio-2025/resume.pdf
 
-  const handleDownload = async (e) => {
-    e.preventDefault();
-    e.stopPropagation();          
-    if (status === "downloading") return;
-
-    setStatus("downloading");
-    try {
-      const url = `${import.meta.env.BASE_URL}resume.pdf`;
-      const res = await fetch(url, { cache: "no-store" });
-      if (!res.ok) throw new Error("File not found");
-
-      const blob = await res.blob();
-      const dlUrl = URL.createObjectURL(blob);
-      const a = document.createElement("a");
-      a.href = dlUrl;
-      a.download = "Lucas_Resume.pdf"; // rename on save
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      URL.revokeObjectURL(dlUrl);
-
-      setStatus("done");
+  const handleClick = () => {
+    // purely UI state; let the browser handle the download natively
+    if (status !== "downloading") {
+      setStatus("downloading");
+      // quickly flip to 'done' so the UI feels responsive
+      setTimeout(() => setStatus("done"), 300);
       setTimeout(() => setStatus("idle"), 2000);
-    } catch (err) {
-      console.error(err);
-      alert("Resume not found on the site. Make sure /public/resume.pdf exists.");
-      setStatus("idle");
     }
   };
 
   return (
-    <button
-      type="button"                
-      onClick={handleDownload}
-      disabled={status === "downloading"}
-      aria-busy={status === "downloading"}
-      className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+    <a
+      href={pdfHref}
+      download="Lucas_Resume.pdf"
+      onClick={handleClick}              // no preventDefault!
+      className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 disabled:opacity-60"
+      role="button"
     >
       {status === "downloading" ? (
         <>
@@ -58,6 +40,6 @@ export default function ResumeDownloadButton() {
           Download Resume
         </>
       )}
-    </button>
+    </a>
   );
 }

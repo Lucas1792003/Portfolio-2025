@@ -30,27 +30,27 @@ export const AboutSection = () => {
               into projects that not only look good but also work smoothly across devices. As I continue 
               to grow, I’m excited to learn new tools and bring fresh, modern design to every project I take on.
             </p>
-            {/* <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">Get In Touch</a>
               <ResumeDownloadButton />
-            </div> */}
+            </div>
 
-
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+            {/* <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
                 {" "}
                 Get In Touch
               </a>
 
               <a
-                href={`${import.meta.env.BASE_URL}resume.pdf`}
-                download="Lucas_Resume.pdf"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
-              >
-                Download Resume
-              </a>
+              href={new URL("resume.pdf", import.meta.env.BASE_URL).toString()}
+              download="Lucas_Resume.pdf"
+              className="inline-flex items-center gap-2 px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors"
+            >
+              Download Resume
+            </a>
 
-            </div>
+
+            </div> */}
           </div>
 
           <div className="grid grid-cols-1 gap-6">
