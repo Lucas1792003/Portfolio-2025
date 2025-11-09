@@ -101,13 +101,13 @@ export const SkillsSection = () => {
 
 const DotIndicator = ({ tier, showLabels = true }) => {
   const stops = [0, 50, 100];
-  const fillPct = ((tier - 1) / 2) * 100; // 0 / 50 / 100
+  const fillPct = ((tier - 1) / 2) * 100; 
 
   return (
     <div>
-      {/* light base track */}
+
       <div className="relative h-2 rounded-full bg-neutral-100">
-        {/* soft primary fill (no heavy glow) */}
+
         <div
           className="absolute inset-y-0 left-0 rounded-full
                      bg-gradient-to-r from-primary/90 to-primary/70
@@ -115,7 +115,7 @@ const DotIndicator = ({ tier, showLabels = true }) => {
           style={{ width: `${fillPct}%` }}
         />
 
-        {/* dots centered on track, clean/light */}
+
         {stops.map((pct, idx) => {
           const active = idx + 1 <= tier;
           return (
