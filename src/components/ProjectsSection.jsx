@@ -7,7 +7,7 @@ const projects = [
     description: "Full-featured e-commerce platform with user authentication and payment processing.",
     image: "projects/project1.png",
     tags: ["React", "Stripe", "Supabase", "Node.js"],
-    demoUrl: "http://myatpwint-alb-1784974809.ap-southeast-2.elb.amazonaws.com/books",
+    demoUrl: "https://app.myatpwint.me/books",
     githubUrl: "https://github.com/byte-squad-abac/myatpwint",
   },
   {
