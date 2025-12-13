@@ -3,12 +3,13 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 const projects = [
   {
     id: 1,
-    title: "MyatPwint Publishing",
-    description: "Full-featured e-commerce platform with user authentication and payment processing.",
-    image: "projects/project1.png",
-    tags: ["React", "Stripe", "Supabase", "Node.js"],
-    demoUrl: "https://app.myatpwint.me/books",
-    githubUrl: "https://github.com/byte-squad-abac/myatpwint",
+    title: "MoodCast",
+    description:
+      "A smart weather companion that recommends moods, outfits, and plans based on the weather.",
+    image: "projects/project3.png",
+    tags: ["Next.js", "TypeScript", "Tailwind"],
+    demoUrl: "https://mood-cast.vercel.app/",
+    githubUrl: "https://github.com/Lucas1792003/MoodCast",
   },
   {
     id: 2,
@@ -22,13 +23,12 @@ const projects = [
   },
   {
     id: 3,
-    title: "E-commerce Platform",
-    description:
-      "Trying first time building E-commerce site with PHP for database project. Selling cute pets.",
-    image: "projects/project3.png",
-    tags: ["Html", "JavaScript", "PHP"],
-    demoUrl: "https://lucas1792003.github.io/Pawsitive/",
-    githubUrl: "https://github.com/Lucas1792003/Pawsitive",
+    title: "MyatPwint Publishing",
+    description: "Full-featured e-commerce platform with user authentication and payment processing.",
+    image: "projects/project1.png",
+    tags: ["React", "Stripe", "Supabase", "Node.js"],
+    demoUrl: "https://app.myatpwint.me/books",
+    githubUrl: "https://github.com/byte-squad-abac/myatpwint",
   },
 ];
 
