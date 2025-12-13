@@ -6,7 +6,7 @@ const projects = [
     title: "MoodCast",
     description:
       "A smart weather companion that recommends moods, outfits, and plans based on the weather.",
-    image: "projects/project3.png",
+    image: "projects/project3-1.png",
     tags: ["Next.js", "TypeScript", "Tailwind"],
     demoUrl: "https://mood-cast.vercel.app/",
     githubUrl: "https://github.com/Lucas1792003/MoodCast",
