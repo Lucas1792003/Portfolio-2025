@@ -3,7 +3,7 @@ import { Download, Loader2, CheckCircle2 } from "lucide-react";
 
 export default function ResumeDownloadButton() {
   const [status, setStatus] = useState("idle");
-  const pdfHref = `${import.meta.env.BASE_URL}resume.pdf`; 
+  const pdfHref = `${import.meta.env.BASE_URL}resume.pdf?v=2`;
 
   const handleClick = () => {
 
